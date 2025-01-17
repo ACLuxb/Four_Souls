@@ -4,8 +4,9 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - RoomSpawnpoint
   - Rooms
+  - Spawnpoint
+  - Room
   layers:
   - Default
   - TransparentFX

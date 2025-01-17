@@ -42,9 +42,51 @@ public class RoomSpawner : MonoBehaviour {
             spawned = true;
         }
     }
-    void OnTriggerEnter2D(Collider2D collision)
+    
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.CompareTag("Spawnpoint"))
+        if (other.CompareTag("Room"))
+        {
             Destroy(gameObject);
+        }
+        if (other.CompareTag("Spawnpoint"))
+        {
+            if (spawned == false)
+            {
+                int otherOpening = other.GetComponent<RoomSpawner>().openingDirection;
+
+                if ((openingDirection == 1 && otherOpening == 2))
+                {
+                    rand = Random.Range(0, templates.tbRooms.Length);
+                    Instantiate(templates.tbRooms[rand], transform.position, templates.tbRooms[rand].transform.rotation);
+                }
+                else if ((openingDirection == 1 && otherOpening == 3))
+                {
+                    rand = Random.Range(0, templates.blRooms.Length);
+                    Instantiate(templates.blRooms[rand], transform.position, templates.blRooms[rand].transform.rotation);
+                }
+                else if ((openingDirection == 1 && otherOpening == 4))
+                {
+                    rand = Random.Range(0, templates.brRooms.Length);
+                    Instantiate(templates.brRooms[rand], transform.position, templates.brRooms[rand].transform.rotation);
+                }
+                else if ((openingDirection == 2 && otherOpening == 3))
+                {
+                    rand = Random.Range(0, templates.tlRooms.Length);
+                    Instantiate(templates.tlRooms[rand], transform.position, templates.tlRooms[rand].transform.rotation);
+                }
+                else if ((openingDirection == 2 && otherOpening == 4))
+                {
+                    rand = Random.Range(0, templates.trRooms.Length);
+                    Instantiate(templates.trRooms[rand], transform.position, templates.trRooms[rand].transform.rotation);
+                }
+                else if ((openingDirection == 3 && otherOpening == 4))
+                {
+                    rand = Random.Range(0, templates.lrRooms.Length);
+                    Instantiate(templates.lrRooms[rand], transform.position, templates.lrRooms[rand].transform.rotation);
+                }
+            }
+        }
+        spawned = true;
     }
 }
