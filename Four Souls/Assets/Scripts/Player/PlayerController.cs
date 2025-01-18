@@ -67,15 +67,4 @@ public class PlayerMovement : MonoBehaviour
             lastFire = Time.time;
         }
     }
-
-
-    /*
-    void OnTriggerEnter(Collider Door)
-    {
-        Debug.Log("teleporting");
-        {
-            transform.localPosition = new Vector2(0,0);
-        }
-    }
-    */
 }
