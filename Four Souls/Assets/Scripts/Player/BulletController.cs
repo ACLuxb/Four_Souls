@@ -29,5 +29,7 @@ public class BulletController : MonoBehaviour
             Destroy(gameObject);
             Debug.Log(other.tag);
         }
+        if (other.gameObject.CompareTag("Wall") == true || other.gameObject.CompareTag("Door") == true)
+            Destroy(gameObject);
     }
 }
