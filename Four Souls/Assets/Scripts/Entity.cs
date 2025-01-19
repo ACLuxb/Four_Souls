@@ -10,7 +10,7 @@ public class Entity : MonoBehaviour
 
     public Entity (float health, float movementSpeed, float attackDamage)
     {
-        this.health = health;
+        this.health = 10;
         this.movementSpeed = movementSpeed;
         this.attackDamage = attackDamage;
     }

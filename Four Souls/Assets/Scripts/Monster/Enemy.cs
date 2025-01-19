@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class Enemy : Entity
+public class Enemy : MonoBehaviour
 {
-    public Enemy (float health, float movementSpeed, float attackDamage) : base (health, movementSpeed, attackDamage) { }
+    private int health = 10;
 
     private Rigidbody2D rb;
     private void Start()

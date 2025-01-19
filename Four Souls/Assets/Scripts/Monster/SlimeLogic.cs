@@ -2,11 +2,14 @@ using UnityEngine;
 
 public class SlimeLogic : MonoBehaviour
 {
+
     private GameObject player;
 
     [SerializeField] private float speed;
 
     public bool monsterActiv;
+
+    
 
     void Start()
     {
