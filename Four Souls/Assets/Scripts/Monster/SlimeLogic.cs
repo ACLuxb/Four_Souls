@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class SlimeLogic : MonoBehaviour
@@ -7,14 +8,14 @@ public class SlimeLogic : MonoBehaviour
 
     [SerializeField] private float speed;
 
-    public bool monsterActiv;
+    bool monsterActiv = false;
 
     
 
     void Start()
     {
         player = GameObject.Find("Player");
-        Idle();
+        StartCoroutine(SpawnDelay());
     }
 
     // Update is called once per frame
@@ -28,8 +29,9 @@ public class SlimeLogic : MonoBehaviour
         }
     }
 
-    void Idle()
+    IEnumerator SpawnDelay() 
     {
-
+        yield return new WaitForSeconds(0.5f);
+        monsterActiv = true;
     }
 }
