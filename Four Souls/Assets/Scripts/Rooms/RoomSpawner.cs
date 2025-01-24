@@ -19,30 +19,90 @@ public class RoomSpawner : MonoBehaviour {
     {
         if (spawned == false)
         {
-            if (openingDirection == 1)
+            switch (openingDirection)
             {
-                rand = Random.Range(0, templates.bottomRooms.Length);
-                Instantiate(templates.bottomRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
-            }
-            else if (openingDirection == 2)
-            {
-                rand = Random.Range(0, templates.topRooms.Length);
-                Instantiate(templates.topRooms[rand], transform.position, templates.topRooms[rand].transform.rotation);
-            }
-            else if (openingDirection == 3)
-            {
-                rand = Random.Range(0, templates.leftRooms.Length);
-                Instantiate(templates.leftRooms[rand], transform.position, templates.leftRooms[rand].transform.rotation);
-            }
-            else if (openingDirection == 4)
-            {
-                rand = Random.Range(0, templates.rightRooms.Length);
-                Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);
+                case 1:
+                    rand = Random.Range(1, 5); //bottomRooms
+                    switch (rand)
+                    {
+                        case 1:
+                            RandomRoom(templates.bRooms);
+                            break;
+                        case 2:
+                            RandomRoom(templates.brRooms);
+                            break;
+                        case 3:
+                            RandomRoom(templates.blRooms);
+                            break;
+                        case 4:
+                            RandomRoom(templates.tbRooms);
+                            break;
+                    }
+                    break;
+                case 2:
+                    rand = Random.Range(1, 5); //topRooms
+                    switch (rand)
+                    {
+                        case 1:
+                            RandomRoom(templates.tRooms);
+                            break;
+                        case 2:
+                            RandomRoom(templates.trRooms);
+                            break;
+                        case 3:
+                            RandomRoom(templates.tlRooms);
+                            break;
+                        case 4:
+                            RandomRoom(templates.tbRooms);
+                            break;
+                    }
+                    break;
+                case 3:
+                    rand = Random.Range(1, 5); //leftRooms
+                    switch (rand)
+                    {
+                        case 1:
+                            RandomRoom(templates.lRooms);
+                            break;
+                        case 2:
+                            RandomRoom(templates.tlRooms);
+                            break;
+                        case 3:
+                            RandomRoom(templates.blRooms);
+                            break;
+                        case 4:
+                            RandomRoom(templates.lrRooms);
+                            break;
+                    }
+                    break;
+                case 4:
+                    rand = Random.Range(1, 5); //rightRooms
+                    switch (rand)
+                    {
+                        case 1:
+                            RandomRoom(templates.rRooms);
+                            break;
+                        case 2:
+                            RandomRoom(templates.trRooms);
+                            break;
+                        case 3:
+                            RandomRoom(templates.brRooms);
+                            break;
+                        case 4:
+                            RandomRoom(templates.lrRooms);
+                            break;
+                    }
+                    break;
             }
             spawned = true;
         }
     }
-    
+
+    void RandomRoom(GameObject[] rooms)
+    {
+        rand = Random.Range(0, rooms.Length);
+        Instantiate(rooms[rand], transform.position, rooms[rand].transform.rotation);
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Room"))
