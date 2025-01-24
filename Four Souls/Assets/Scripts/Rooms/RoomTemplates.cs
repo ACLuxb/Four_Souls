@@ -30,19 +30,19 @@ public class RoomTemplates : MonoBehaviour
     private void LoadPrefabs()
     {
 
-        LoadforeachFolder(ref bRooms, "Assets/Prefabs/Rooms/BottomRooms");
-        LoadforeachFolder(ref tRooms, "Assets/Prefabs/Rooms/TopRooms");
-        LoadforeachFolder(ref rRooms, "Assets/Prefabs/Rooms/RightRooms");
-        LoadforeachFolder(ref lRooms, "Assets/Prefabs/Rooms/LeftRooms");
-        LoadforeachFolder(ref brRooms, "Assets/Prefabs/Rooms/BottomRightRooms");
-        LoadforeachFolder(ref blRooms, "Assets/Prefabs/Rooms/BottomLeftRooms");
-        LoadforeachFolder(ref trRooms, "Assets/Prefabs/Rooms/TopRightRooms");
-        LoadforeachFolder(ref tlRooms, "Assets/Prefabs/Rooms/TopLeftRooms");
-        LoadforeachFolder(ref tbRooms, "Assets/Prefabs/Rooms/TopBottomRooms");
-        LoadforeachFolder(ref lrRooms, "Assets/Prefabs/Rooms/LeftRightRooms");
+        LoadforeachFolder(bRooms, "Assets/Prefabs/Rooms/BottomRooms");
+        LoadforeachFolder(tRooms, "Assets/Prefabs/Rooms/TopRooms");
+        LoadforeachFolder(rRooms, "Assets/Prefabs/Rooms/RightRooms");
+        LoadforeachFolder(lRooms, "Assets/Prefabs/Rooms/LeftRooms");
+        LoadforeachFolder(brRooms, "Assets/Prefabs/Rooms/BottomRightRooms");
+        LoadforeachFolder(blRooms, "Assets/Prefabs/Rooms/BottomLeftRooms");
+        LoadforeachFolder(trRooms, "Assets/Prefabs/Rooms/TopRightRooms");
+        LoadforeachFolder(tlRooms, "Assets/Prefabs/Rooms/TopLeftRooms");
+        LoadforeachFolder(tbRooms, "Assets/Prefabs/Rooms/TopBottomRooms");
+        LoadforeachFolder(lrRooms, "Assets/Prefabs/Rooms/LeftRightRooms");
         
     }
-    private void LoadforeachFolder(ref GameObject[] rooms, string path)
+    private GameObject[] LoadforeachFolder(GameObject[] rooms, string path)
     {
         string[] guids = AssetDatabase.FindAssets("t:Prefab", new[] { path });
 
@@ -55,6 +55,7 @@ public class RoomTemplates : MonoBehaviour
         }
 
         Debug.Log($"Loaded {rooms.Length} prefabs from {path}.");
+        return rooms;
     }
 #endif
 }
