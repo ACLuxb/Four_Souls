@@ -8,16 +8,22 @@ public class RoomCloser : MonoBehaviour
 
     private int enemyCounter;
 
+    private RoomTemplates roomTemplates;
+
+    private void Start()
+    {
+        roomTemplates.RoomsInFloor.Add(gameObject);
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.CompareTag("Player"))
             currentRoomActive = true;
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.CompareTag("Player"))
             currentRoomActive = false;
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.CompareTag("Enemy"))
             enemyCounter--;
     }
 

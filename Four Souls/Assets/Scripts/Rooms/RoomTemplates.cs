@@ -25,6 +25,9 @@ public class RoomTemplates : MonoBehaviour
     public GameObject[] rRooms;
     public GameObject[] lRooms;
 
+    public List<GameObject> RoomsInFloor = new List<GameObject>();
+    
+
 #if UNITY_EDITOR
     [ContextMenu("Load Prefabs")]
     private void LoadPrefabs()
