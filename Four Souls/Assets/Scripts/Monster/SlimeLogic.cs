@@ -10,7 +10,6 @@ public class SlimeLogic : MonoBehaviour
 
     bool monsterActiv = false;
 
-    
 
     void Start()
     {
