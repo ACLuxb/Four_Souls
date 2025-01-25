@@ -12,7 +12,8 @@ public class RoomCloser : MonoBehaviour
 
     private void Start()
     {
-        roomTemplates.RoomsInFloor.Add(gameObject);
+        roomTemplates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
+        roomTemplates.RoomsInFloor.Add(this.gameObject);
     }
     void OnTriggerEnter2D(Collider2D other)
     {

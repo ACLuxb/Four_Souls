@@ -25,8 +25,36 @@ public class RoomTemplates : MonoBehaviour
     public GameObject[] rRooms;
     public GameObject[] lRooms;
 
-    public List<GameObject> RoomsInFloor = new List<GameObject>();
-    
+    public List<GameObject> RoomsInFloor;
+
+    public float waitTime;
+    public bool spawnedBoss;
+    public GameObject boss;
+
+    public Sprite BossRoomSprite;
+
+    private void Update()
+    {
+        if (waitTime <= 0 && spawnedBoss == false)
+        {
+            for (int i = 0; i < RoomsInFloor.Count; i++)
+            {
+                if (i == RoomsInFloor.Count-1)
+                {
+
+                    RoomsInFloor[i].GetComponent<SpriteRenderer>().sprite = BossRoomSprite;
+                    Instantiate(boss, RoomsInFloor[i].transform.position, Quaternion.identity);
+                    //foreach() MonsterSpawner in room -> destroy
+
+                    spawnedBoss = true;
+                }
+            }
+        }
+        else
+        {
+            waitTime -= Time.deltaTime;
+        }
+    }
 
 #if UNITY_EDITOR
     [ContextMenu("Load Prefabs")]
