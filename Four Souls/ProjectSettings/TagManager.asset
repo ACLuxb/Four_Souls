@@ -10,6 +10,8 @@ TagManager:
   - Enemy
   - Wall
   - Door
+  - MonsterSpawn
+  - Enemies
   layers:
   - Default
   - TransparentFX

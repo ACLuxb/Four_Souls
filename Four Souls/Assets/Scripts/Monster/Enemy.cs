@@ -3,6 +3,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     private int health = 10;
+    
+    private int collisionDamage = 2;
 
     private Rigidbody2D rb;
     private void Start()
@@ -18,7 +20,14 @@ public class Enemy : MonoBehaviour
             Die();
         }
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Player player = collision.gameObject.GetComponent<Player>();
+            player.TakeDamage(collisionDamage);
+        }
+    }
 
     public void GetKnockback(GameObject sender, int strength)
     {
