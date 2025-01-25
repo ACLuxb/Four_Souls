@@ -9,6 +9,7 @@ public class RoomSpawner : MonoBehaviour {
     private RoomTemplates templates;
     private int rand;
     private bool spawned = false;
+    private RoomCloser roomCloser;
 
     void Start()
     {
@@ -107,6 +108,20 @@ public class RoomSpawner : MonoBehaviour {
     {
         if (other.CompareTag("Room"))
         {
+            /*
+            roomCloser = other.GetComponent<RoomCloser>();
+            int[] roomopenings = roomCloser.Openings;
+            foreach (int i in roomopenings)
+            {
+                if ((openingDirection == 1 && i == 2) || (openingDirection == 2 && i == 1) || (openingDirection == 3 && i == 4) || (openingDirection == 4 && i == 3))
+                    Destroy(gameObject);
+                else
+                {
+                    if
+                }
+
+            }
+            */
             Destroy(gameObject);
         }
         if (other.CompareTag("Spawnpoint"))

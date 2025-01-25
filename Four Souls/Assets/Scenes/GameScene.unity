@@ -664,6 +664,10 @@ MonoBehaviour:
   spawnedBoss: 0
   boss: {fileID: 2894361051901791965, guid: be3a98495a053024ca7f25cf2a464c0b, type: 3}
   BossRoomSprite: {fileID: -5659672625557507303, guid: d3ae06c58cba08649b306f1c1f42339e, type: 3}
+  RedCrystal: {fileID: 0}
+  BlueCrystal: {fileID: 0}
+  YellowCrystal: {fileID: 0}
+  GreenCrystal: {fileID: 0}
 --- !u!4 &1958353595
 Transform:
   m_ObjectHideFlags: 0
@@ -783,6 +787,10 @@ PrefabInstance:
     - target: {fileID: 4422054336706510892, guid: 4b2d15db13a957d4aa58a27a89f38f45, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768652260881943324, guid: 4b2d15db13a957d4aa58a27a89f38f45, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

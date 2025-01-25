@@ -10,6 +10,10 @@ public class RoomCloser : MonoBehaviour
 
     private RoomTemplates roomTemplates;
 
+    public Sprite ClosedDoor;
+
+    //public int[] Openings;
+
     private void Start()
     {
         roomTemplates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
@@ -51,7 +55,8 @@ public class RoomCloser : MonoBehaviour
             {
                 if (child.CompareTag("Door"))
                 {
-                    child.gameObject.SetActive(false);
+                    child.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                    child.GetComponent<SpriteRenderer>().sprite = ClosedDoor;
                 }
             }
         }

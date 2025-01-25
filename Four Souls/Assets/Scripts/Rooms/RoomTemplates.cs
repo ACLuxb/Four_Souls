@@ -5,6 +5,8 @@ using System.Linq;
 using System.IO;
 
 
+
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -31,7 +33,14 @@ public class RoomTemplates : MonoBehaviour
     public bool spawnedBoss;
     public GameObject boss;
 
+    private int rand;
+
     public Sprite BossRoomSprite;
+
+    public GameObject RedCrystal;
+    public GameObject BlueCrystal;
+    public GameObject YellowCrystal;
+    public GameObject GreenCrystal;
 
     private void Update()
     {
@@ -48,6 +57,9 @@ public class RoomTemplates : MonoBehaviour
 
                     spawnedBoss = true;
                 }
+                rand = UnityEngine.Random.Range(0, RoomsInFloor.Count);
+                RedCrystal.transform.parent = RoomsInFloor[rand].transform;
+
             }
         }
         else

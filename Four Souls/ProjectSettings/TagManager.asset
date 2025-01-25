@@ -12,6 +12,7 @@ TagManager:
   - Door
   - MonsterSpawn
   - Enemies
+  - Crystal
   layers:
   - Default
   - TransparentFX
