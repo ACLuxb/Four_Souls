@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4d685d5d2fd4fb44da6aa334d7432a33
+guid: 0552506de840aa74a94f2288e6c97ec4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7103855294565326
-    second: DungeonRoom_0
+      213: 1982962675130841009
+    second: Run Down_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DungeonRoom_0
+      name: Run Down_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2592
-        height: 1440
+        x: 43
+        y: 11
+        width: 266
+        height: 502
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 234b1acc413c6eff0800000000000000
-      internalID: -7103855294565326
+      spriteID: 1b7380efb06e48b10800000000000000
+      internalID: 1982962675130841009
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      DungeonRoom_0: -7103855294565326
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

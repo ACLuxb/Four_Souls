@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 4d685d5d2fd4fb44da6aa334d7432a33
+guid: 69bb0cf240c4569489ddcd7777488ef4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7103855294565326
-    second: DungeonRoom_0
+      213: -4346244404228752641
+    second: Arrow_0
+  - first:
+      213: -6662812116773042688
+    second: Arrow_1
+  - first:
+      213: -2292719611878453243
+    second: Arrow_2
+  - first:
+      213: 5946551882310926714
+    second: Arrow_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DungeonRoom_0
+      name: Arrow_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2592
-        height: 1440
+        x: 336
+        y: 147
+        width: 19
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 234b1acc413c6eff0800000000000000
-      internalID: -7103855294565326
+      spriteID: ffa7ae2edb90fa3c0800000000000000
+      internalID: -4346244404228752641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arrow_1
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 46
+        width: 334
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 006039e4eafe883a0800000000000000
+      internalID: -6662812116773042688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arrow_2
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 26
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500d96c09af9e20e0800000000000000
+      internalID: -2292719611878453243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arrow_3
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 26
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a71c2974e65668250800000000000000
+      internalID: 5946551882310926714
       vertices: []
       indices: 
       edges: []
@@ -147,8 +222,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      DungeonRoom_0: -7103855294565326
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

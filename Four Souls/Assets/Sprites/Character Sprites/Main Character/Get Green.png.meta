@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 4d685d5d2fd4fb44da6aa334d7432a33
+guid: d5df4d8a20f152a428e9a0477e3c9048
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7103855294565326
-    second: DungeonRoom_0
+      213: -5248995702375547452
+    second: Get Green_0
+  - first:
+      213: -1189133374823074432
+    second: Get Green_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DungeonRoom_0
+      name: Get Green_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2592
-        height: 1440
+        x: 34
+        y: 8
+        width: 392
+        height: 504
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 234b1acc413c6eff0800000000000000
-      internalID: -7103855294565326
+      spriteID: 4cd7a541832d727b0800000000000000
+      internalID: -5248995702375547452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Get Green_1
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 508
+        width: 100
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 085fb13fe795f7fe0800000000000000
+      internalID: -1189133374823074432
       vertices: []
       indices: 
       edges: []
@@ -147,8 +172,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      DungeonRoom_0: -7103855294565326
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
