@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private int health = 10;
+    public int health = 10;
     
     private int collisionDamage = 2;
 

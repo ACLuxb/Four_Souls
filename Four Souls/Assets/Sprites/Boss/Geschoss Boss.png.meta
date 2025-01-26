@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5930af47ff7d0884aa56dc94b3511978
+guid: dc897e40a5566844b8a300b036e32834
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2427890715253797343
-    second: BossHand Left (1)_0
+      213: 4647153848696920305
+    second: Geschoss Boss_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BossHand Left (1)_0
+      name: Geschoss Boss_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 13
-        width: 328
-        height: 458
+        x: 1017
+        y: 306
+        width: 490
+        height: 233
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12e04db02466e4ed0800000000000000
-      internalID: -2427890715253797343
+      spriteID: 1f85b20cdc10e7040800000000000000
+      internalID: 4647153848696920305
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 272182288b7f752438a9b2628ccae76e
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BossHand Left (1)_0: -2427890715253797343
+      Geschoss Boss_0: 4647153848696920305
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
