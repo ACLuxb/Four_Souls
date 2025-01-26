@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Boss_Phase_2_(onepiece)_0: -6983784772231825238
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

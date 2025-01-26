@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Boss_Phase_2_Geschoss_0: -8212399150387373469
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

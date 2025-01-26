@@ -11,6 +11,7 @@ public class RoomCloser : MonoBehaviour
     private RoomTemplates roomTemplates;
 
     public Sprite OpenDoor;
+    public Sprite ClosedDoor;
 
 
     private void Start()
@@ -27,19 +28,20 @@ public class RoomCloser : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
             currentRoomActive = false;
-        if (other.gameObject.CompareTag("Enemy"))
-            enemyCounter--;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        if (currentRoomActive)
+        if (currentRoomActive == true)
         {
             foreach (UnityEngine.Transform child in transform)
             {
                 if (child.CompareTag("MonsterSpawn"))
                 {
                     child.gameObject.SetActive(true);
+                }
+                if (child.CompareTag("Enemy"))
+                {
                     enemyCounter++;
                 }
             }
@@ -59,5 +61,17 @@ public class RoomCloser : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            foreach (UnityEngine.Transform child in transform)
+            {
+                if (child.CompareTag("Door"))
+                {
+                    child.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                    child.GetComponent<SpriteRenderer>().sprite = ClosedDoor;
+                }
+            }
+        }
+        enemyCounter = 0;
     }
 }
