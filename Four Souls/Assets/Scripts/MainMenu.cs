@@ -5,10 +5,11 @@ using UnityEngine.Audio;
 
 public class MainMenu : MonoBehaviour
 {
-    public AudioSource ButtonClick;
+    // public AudioSource ButtonClick;      didnt work, kept for reference
 
     public void PlayGame() //method to start the gameplay  
-    {    
+    {
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //Load the next scene following the active one via scene index number
     }
 
@@ -26,8 +27,8 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Main Menu"); //fixed scene name as it isnt likely to be changed
     }
 
-    public void PlayButtonSound()
-    {
-    ButtonClick.Play();
-    }
+    //public void PlayButtonSound() //didnt work, kept for reference
+    //{
+    //ButtonClick.Play();
+    //}
 }
