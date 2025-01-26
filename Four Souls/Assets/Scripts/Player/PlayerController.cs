@@ -24,43 +24,44 @@ public class PlayerMovement : MonoBehaviour
         Move();
     }
 
-    void MoveInputs()
+    void MoveInputs() //gehen
     {
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
+        float moveX = Input.GetAxisRaw("Horizontal"); // bewegung x positiv rechts -> negativ links    sprite: run side
+        float moveY = Input.GetAxisRaw("Vertical"); // bewegung y positiv up   sprite: run up / y negativ down   sprite: run down
 
         moveDirection = new Vector2(moveX, moveY).normalized;    
     }
 
     void Move()
     {
+
         rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
     }
 
-    void ShootInputs()
+    void ShootInputs() // schießen
     {
         float shootX = Input.GetAxisRaw("ShootHorizontal");
         float shootY = Input.GetAxisRaw("ShootVertical");
 
-        if (shootX > 0 && Time.time > (lastFire + FireDelay))
+        if (shootX > 0 && Time.time > (lastFire + FireDelay)) // wenn x positiv dann schießt nach rechts -> währendessen sprite:shoot side oder shoot run side? (geflippt)
         {
             GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
             bullet.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(shootX * bulletSpeed + Mathf.Clamp(0.4f * rb.linearVelocity.x, 0, 100), 0.5f * rb.linearVelocity.y);
             lastFire = Time.time;
         }
-        if (shootX < 0 && Time.time > (lastFire + FireDelay))
+        if (shootX < 0 && Time.time > (lastFire + FireDelay)) // x negativ links -> wie oben nur geflippt
         {
             GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
             bullet.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(shootX * bulletSpeed + Mathf.Clamp(0.4f * rb.linearVelocity.x, -100, 0), 0.5f * rb.linearVelocity.y);
             lastFire = Time.time;
         }
-        if (shootY > 0 && Time.time > (lastFire + FireDelay))
+        if (shootY > 0 && Time.time > (lastFire + FireDelay)) // y positiv 
         {
             GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
             bullet.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0.5f * rb.linearVelocity.x, shootY * bulletSpeed + Mathf.Clamp(0.4f * rb.linearVelocity.y, 0, 100));
             lastFire = Time.time;
         }
-        if (shootY < 0 && Time.time > (lastFire + FireDelay))
+        if (shootY < 0 && Time.time > (lastFire + FireDelay)) // y negativ
         {
             GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
             bullet.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0.5f * rb.linearVelocity.x, shootY * bulletSpeed + Mathf.Clamp(0.4f * rb.linearVelocity.y, -100, 0));
