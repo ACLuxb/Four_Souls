@@ -1,2 +1,12 @@
 fileFormatVersion: 2
 guid: b621927a675555447b6a728b54fda1fd
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - OpenDoor: {fileID: -7583001618275427313, guid: 2f5b4e8b0fb5a5d4b8d8fa4f6dd6f639, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

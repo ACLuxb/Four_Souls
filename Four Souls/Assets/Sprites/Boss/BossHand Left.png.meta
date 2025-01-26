@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a4e03457151111a40918c2f1746f80f5
+guid: 5930af47ff7d0884aa56dc94b3511978
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6156846309854916968
-    second: BossHand Left_0
+      213: -2427890715253797343
+    second: BossHand Left (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BossHand Left_0
+      name: BossHand Left (1)_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 9
-        width: 458
-        height: 328
+        x: 16
+        y: 13
+        width: 328
+        height: 458
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 861b3933913817550800000000000000
-      internalID: 6156846309854916968
+      spriteID: 12e04db02466e4ed0800000000000000
+      internalID: -2427890715253797343
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BossHand Left_0: 6156846309854916968
+      BossHand Left (1)_0: -2427890715253797343
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

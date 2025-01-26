@@ -58,7 +58,7 @@ public class RoomTemplates : MonoBehaviour
                     spawnedBoss = true;
                 }
                 rand = UnityEngine.Random.Range(0, RoomsInFloor.Count);
-                RedCrystal.transform.parent = RoomsInFloor[rand].transform;
+                //RedCrystal.transform.parent = RoomsInFloor[rand].transform;
 
             }
         }
