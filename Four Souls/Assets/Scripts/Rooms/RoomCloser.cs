@@ -23,11 +23,19 @@ public class RoomCloser : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
             currentRoomActive = true;
+        if (other.CompareTag("Enemy"))
+        {
+            enemyCounter++;
+        }
     }
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
             currentRoomActive = false;
+        if (other.CompareTag("Enemy"))
+        {
+            enemyCounter--;
+        }
     }
 
     private void FixedUpdate()
@@ -40,10 +48,6 @@ public class RoomCloser : MonoBehaviour
                 {
                     child.gameObject.SetActive(true);
                 }
-                if (child.CompareTag("Enemy"))
-                {
-                    enemyCounter++;
-                }
             }
             OpenDoors();
         }
@@ -52,10 +56,12 @@ public class RoomCloser : MonoBehaviour
     {
         if (enemyCounter == 0)
         {
+
             foreach (UnityEngine.Transform child in transform)
             {
                 if (child.CompareTag("Door"))
                 {
+
                     child.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                     child.GetComponent<SpriteRenderer>().sprite = OpenDoor;
                 }
@@ -63,15 +69,16 @@ public class RoomCloser : MonoBehaviour
         }
         else
         {
+
             foreach (UnityEngine.Transform child in transform)
             {
                 if (child.CompareTag("Door"))
                 {
+
                     child.gameObject.GetComponent<BoxCollider2D>().enabled = true;
                     child.GetComponent<SpriteRenderer>().sprite = ClosedDoor;
                 }
             }
         }
-        enemyCounter = 0;
     }
 }

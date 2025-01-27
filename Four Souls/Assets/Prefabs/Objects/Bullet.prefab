@@ -130,8 +130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   airTime: 1
-  damage: 5
-  strength: 4
+  damage: 4
+  strength: 5
 --- !u!61 &2332086612305891293
 BoxCollider2D:
   m_ObjectHideFlags: 0

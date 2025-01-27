@@ -4,9 +4,6 @@ using UnityEngine;
 using System.Linq;
 using System.IO;
 
-
-
-
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -31,7 +28,6 @@ public class RoomTemplates : MonoBehaviour
 
     public float waitTime;
     public bool spawnedBossRoom;
-    public GameObject boss;
 
     private int rand;
 
@@ -54,12 +50,12 @@ public class RoomTemplates : MonoBehaviour
                     RoomsInFloor[i].GetComponent<SpriteRenderer>().sprite = BossRoomSprite;
                     RoomsInFloor[i].AddComponent<BossRoom>();
 
-                    spawnedBossRoom = true;
+
                 }
                 rand = UnityEngine.Random.Range(0, RoomsInFloor.Count);
                 //RedCrystal.transform.parent = RoomsInFloor[rand].transform;
-
             }
+            spawnedBossRoom = true;
         }
         else
         {
