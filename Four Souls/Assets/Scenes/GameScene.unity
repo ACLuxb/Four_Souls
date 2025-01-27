@@ -1062,7 +1062,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 629799785557944246, guid: ae396206989df2a4dbfc90d36ff7aceb, type: 3}
   m_PrefabInstance: {fileID: 1583597102}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1583597107
+--- !u!95 &1583597104
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
