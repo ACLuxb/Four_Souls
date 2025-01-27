@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 868870f9d004a4c40b75f364955e5972
+guid: 371f244c7a6063845bcc97246556b5ad
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4655402835522502140
-    second: Slime_Boy (L)_0
+      213: -9162621065033859519
+    second: full size_nobackground_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slime_Boy (L)_0
+      name: full size_nobackground_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 234
-        height: 236
+        x: 91
+        y: 73
+        width: 1666
+        height: 933
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cfd3aa9a6305b9040800000000000000
-      internalID: 4655402835522502140
+      spriteID: 14e352fdfa4d7d080800000000000000
+      internalID: -9162621065033859519
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Slime_Boy (L)_0: 4655402835522502140
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

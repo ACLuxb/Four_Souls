@@ -3,6 +3,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -18,9 +19,16 @@ public class Player : MonoBehaviour
 
     public List<GameObject> CrystalCollection;
 
+    public TextMeshProUGUI scoretext;
+
     private void Start()
     {
         this.health = maxHealth;
+    }
+
+    public void Update()
+    {
+        scoretext.text = (CrystalCollection.Count + " out of 4 Chrystals found");
     }
 
     public void TakeDamage(int damage)
