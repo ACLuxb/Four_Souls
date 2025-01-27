@@ -302,7 +302,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: -1
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &321002880
 MonoBehaviour:
@@ -957,63 +957,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7801944269392051441, guid: fddc31680ddc6a74ea205182e67b0b05, type: 3}
   m_PrefabInstance: {fileID: 726552892875736630}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1930089750
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2997393293117617703, guid: 4d57641d51c2fba4fb4b7567c4d2f4e9, type: 3}
-      propertyPath: m_Name
-      value: Boss
-      objectReference: {fileID: 0}
-    - target: {fileID: 8318041335131815299, guid: 4d57641d51c2fba4fb4b7567c4d2f4e9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8318041335131815299, guid: 4d57641d51c2fba4fb4b7567c4d2f4e9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 8318041335131815299, guid: 4d57641d51c2fba4fb4b7567c4d2f4e9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8318041335131815299, guid: 4d57641d51c2fba4fb4b7567c4d2f4e9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8318041335131815299, guid: 4d57641d51c2fba4fb4b7567c4d2f4e9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8318041335131815299, guid: 4d57641d51c2fba4fb4b7567c4d2f4e9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8318041335131815299, guid: 4d57641d51c2fba4fb4b7567c4d2f4e9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8318041335131815299, guid: 4d57641d51c2fba4fb4b7567c4d2f4e9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8318041335131815299, guid: 4d57641d51c2fba4fb4b7567c4d2f4e9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8318041335131815299, guid: 4d57641d51c2fba4fb4b7567c4d2f4e9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4d57641d51c2fba4fb4b7567c4d2f4e9, type: 3}
 --- !u!1 &1958353593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,10 +1030,7 @@ MonoBehaviour:
   waitTime: 2
   spawnedBossRoom: 0
   BossRoomSprite: {fileID: -5659672625557507303, guid: d3ae06c58cba08649b306f1c1f42339e, type: 3}
-  RedCrystal: {fileID: 0}
-  BlueCrystal: {fileID: 0}
-  YellowCrystal: {fileID: 0}
-  GreenCrystal: {fileID: 0}
+  Crystals: []
 --- !u!4 &1958353595
 Transform:
   m_ObjectHideFlags: 0
@@ -1288,17 +1228,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4422054336706510892, guid: 4b2d15db13a957d4aa58a27a89f38f45, type: 3}
   m_PrefabInstance: {fileID: 5145117412439501926}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2125532900 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2049012587622561670, guid: 4b2d15db13a957d4aa58a27a89f38f45, type: 3}
-  m_PrefabInstance: {fileID: 5145117412439501926}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508187215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05daede261a15644f9159c9cc8ca0035, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &2125532905
 Animator:
   serializedVersion: 7
@@ -1945,9 +1874,6 @@ SceneRoots:
   - {fileID: 5145117412439501926}
   - {fileID: 700726674}
   - {fileID: 2044719392}
-  - {fileID: 1903047935}
-  - {fileID: 1279595671}
   - {fileID: 315148991}
   - {fileID: 768950662}
   - {fileID: 1423441504}
-  - {fileID: 1930089750}

@@ -37,7 +37,6 @@ public class BossMovement : MonoBehaviour
         {
             targetPosition = previousPlayerPosition;
             previousPlayerPosition = new Vector3(player.transform.position.x, spawnPoint.y, spawnPoint.z);
-            Debug.Log("position");
             elapsedTime = 0f;
         }
         

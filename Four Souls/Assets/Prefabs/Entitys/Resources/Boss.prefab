@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6924312808103580532}
   - component: {fileID: 5669310941492518680}
   - component: {fileID: 4364935561695113607}
+  - component: {fileID: -8526350535790767210}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -168,9 +169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bcefc9d0ce4ed74d9108d4cf8a7217e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 3
-  amplitude: 3
-  player: {fileID: 0}
 --- !u!114 &4364935561695113607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,6 +182,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+--- !u!95 &-8526350535790767210
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2997393293117617703}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3752406870088693743
 GameObject:
   m_ObjectHideFlags: 0

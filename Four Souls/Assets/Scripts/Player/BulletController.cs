@@ -27,7 +27,6 @@ public class BulletController : MonoBehaviour
             enemy.TakeDamage(damage);
             enemy.GetKnockback(this.gameObject, strength);
             Destroy(gameObject);
-            Debug.Log(other.tag);
         }
         if (other.gameObject.CompareTag("Wall") == true || other.gameObject.CompareTag("Door") == true)
             Destroy(gameObject);

@@ -12,14 +12,13 @@ public class BossRoom : MonoBehaviour
     void Start()
     {
         boss = Resources.Load<GameObject>("Boss");
-        Debug.Log(boss.name);
         player = GameObject.Find("Player");
 
         foreach (Transform child in transform)
         {
             if (child.CompareTag("MonsterSpawn"))
             {
-                Destroy(child);
+                Destroy(child.gameObject);
             }
         }
     }

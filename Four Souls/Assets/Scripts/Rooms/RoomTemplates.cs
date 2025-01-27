@@ -1,8 +1,5 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
-using System.IO;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -33,10 +30,8 @@ public class RoomTemplates : MonoBehaviour
 
     public Sprite BossRoomSprite;
 
-    public GameObject RedCrystal;
-    public GameObject BlueCrystal;
-    public GameObject YellowCrystal;
-    public GameObject GreenCrystal;
+    public GameObject[] Crystals;
+
 
     private void Update()
     {
@@ -52,8 +47,11 @@ public class RoomTemplates : MonoBehaviour
 
 
                 }
-                rand = UnityEngine.Random.Range(0, RoomsInFloor.Count);
-                //RedCrystal.transform.parent = RoomsInFloor[rand].transform;
+            }
+            foreach (GameObject Crystal in Crystals)
+            {
+                rand = UnityEngine.Random.Range(0, RoomsInFloor.Count - 1);
+                Instantiate(Crystal, RoomsInFloor[rand].transform.position, Quaternion.identity);
             }
             spawnedBossRoom = true;
         }
