@@ -14,6 +14,8 @@ public class BirdLogic : MonoBehaviour
     public float bulletSpeed = 5f;
     private float fireCooldown = 0f;
 
+    private float rand;
+
     void Start()
     {
         player = GameObject.Find("Player");
@@ -26,10 +28,13 @@ public class BirdLogic : MonoBehaviour
         {
             Vector2 direction = (player.transform.position - transform.position).normalized;
             fireCooldown -= Time.deltaTime;
+
             if (fireCooldown <= 0f)
             {
                 Shoot(direction);
                 fireCooldown = fireRate;
+                rand = Random.Range(0.6f, 1.4f);
+                fireRate = rand;
             }
 
         }

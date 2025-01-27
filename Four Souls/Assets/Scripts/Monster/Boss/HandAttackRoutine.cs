@@ -4,45 +4,49 @@ using UnityEngine;
 
 public class HandAttackRoutine : MonoBehaviour
 {
-    private float rand;
-    float timer;
+    private float rand = 3;
+    private float timer;
     public Sprite attackSprite;
     public Sprite neutralSprite;
     public GameObject FireballPrefab;
-    public Player player;
 
-    private bool phase1;
+    private bool phase2 = false;
+
     void Start()
     {
-        AttackPattern();
+
     }
 
-    void AttackPattern()
+    private void Update()
     {
-        while (phase1 == true)
+        timer += Time.deltaTime;
+
+        if (timer >= rand)
         {
-            rand = Random.Range(4, 7);
-            timer += Time.deltaTime;
-            if (timer >= rand)
-            {
-                Attack();
-                timer = 0;
-            }
+            timer = 0;
+            Shoot();
+            rand = Random.Range(1f, 3f);
         }
-    }
 
-    void Attack()
-    {
-
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = attackSprite;
-        Invoke("Shoot", 1f);
+        Enemy enemy = GetComponentInParent<Enemy>();
+        if (enemy.health < enemy.maxhealth/2)
+        {
+            phase2 = true;
+        }
 
     }
     void Shoot()
     {
-        Vector2 direction = player.transform.position - transform.position;
-        GameObject Fireball = Instantiate(FireballPrefab, transform.position, transform.rotation);
-        Fireball.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, -10);
+        GameObject Fireball = Instantiate(FireballPrefab, transform.position, Quaternion.Euler(0, 0, -90));
+        Fireball.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, -6);
         this.gameObject.GetComponent<SpriteRenderer>().sprite = neutralSprite;
+
+        if (phase2)
+        {
+            GameObject Fireball2 = Instantiate(FireballPrefab, transform.position, Quaternion.Euler(0, 0, -90));
+            Fireball2.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(2, -6);
+            GameObject Fireball3 = Instantiate(FireballPrefab, transform.position, Quaternion.Euler(0, 0, -90));
+            Fireball3.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(-2, -6);
+        }
     }
 }

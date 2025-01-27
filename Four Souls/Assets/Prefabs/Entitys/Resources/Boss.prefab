@@ -106,9 +106,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -120,7 +120,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &6924312808103580532
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -181,7 +181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06f5a166cac2694681bf41db4a22af1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 0
+  maxhealth: 100
 --- !u!95 &-8526350535790767210
 Animator:
   serializedVersion: 7
@@ -324,7 +325,6 @@ MonoBehaviour:
   attackSprite: {fileID: -5686097886717912261, guid: 8c42fc1c73caa0f45a0cd1170ad7603e, type: 3}
   neutralSprite: {fileID: -7443139270320661919, guid: 182c30bbc8ca1964e85de21c313832d6, type: 3}
   FireballPrefab: {fileID: 4311825703817892169, guid: 51441eafe08a6c349ae3a6369e6bd11e, type: 3}
-  player: {fileID: 0}
 --- !u!1 &8149018816084661022
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +429,6 @@ MonoBehaviour:
   attackSprite: {fileID: -8002470125081208810, guid: e0adef8b29a28264fbe971a37ee20017, type: 3}
   neutralSprite: {fileID: -2427890715253797343, guid: 5930af47ff7d0884aa56dc94b3511978, type: 3}
   FireballPrefab: {fileID: 4311825703817892169, guid: 51441eafe08a6c349ae3a6369e6bd11e, type: 3}
-  player: {fileID: 0}
 --- !u!114 &2221555638524056192
 MonoBehaviour:
   m_ObjectHideFlags: 0

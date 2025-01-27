@@ -12,7 +12,6 @@ public class BossRoom : MonoBehaviour
     void Start()
     {
         boss = Resources.Load<GameObject>("Boss");
-        player = GameObject.Find("Player");
 
         foreach (Transform child in transform)
         {
@@ -24,17 +23,20 @@ public class BossRoom : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (bossSpawned == false)
+        if (other.gameObject.CompareTag("Player"))
         {
-            if (other.gameObject.CompareTag("Player"))
+            Player player = other.gameObject.GetComponent<Player>();
+
+            if (player.CrystalCollection.Count == 4)
             {
+                
                 player.transform.position = new Vector3(transform.position.x, transform.position.y - 3, transform.position.z);
                 spawnPosition = new Vector3(transform.position.x, transform.position.y + 3, transform.position.z);
+
                 Instantiate(boss, spawnPosition, transform.rotation);
 
+                player.CrystalCollection.Clear();
             }
-            bossSpawned = true;
         }
-
     }
 }

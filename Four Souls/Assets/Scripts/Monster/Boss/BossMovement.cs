@@ -5,8 +5,8 @@ using UnityEngine.Rendering;
 
 public class BossMovement : MonoBehaviour
 {
-    private float frequency = 3f;
-    private float amplitude = 7f;
+    private float frequency = 4f;
+    private float amplitude = 10f;
 
     private Vector3 sinusPosition;
     private GameObject player;
@@ -18,13 +18,13 @@ public class BossMovement : MonoBehaviour
     private Vector3 playerFollowPosition;
 
     private float elapsedTime;
-    private float delay = 0.1f;
-    private float followSpeed = 5;
+    private float delay = 0.15f;
+    private float followSpeed = 7;
 
     private void Start()
     {
         player = GameObject.Find("Player");
-        Debug.Log(player.name);
+
         spawnPoint = transform.position;
         previousPlayerPosition = transform.position;
         

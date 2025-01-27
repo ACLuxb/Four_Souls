@@ -31,7 +31,7 @@ public class RoomTemplates : MonoBehaviour
     public Sprite BossRoomSprite;
 
     public GameObject[] Crystals;
-
+    private Vector3 randomPosition;
 
     private void Update()
     {
@@ -50,8 +50,10 @@ public class RoomTemplates : MonoBehaviour
             }
             foreach (GameObject Crystal in Crystals)
             {
-                rand = UnityEngine.Random.Range(0, RoomsInFloor.Count - 1);
-                Instantiate(Crystal, RoomsInFloor[rand].transform.position, Quaternion.identity);
+
+                randomPosition = new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), Random.Range(-2f, 2f));
+                rand = Random.Range(0, RoomsInFloor.Count - 1);
+                Instantiate(Crystal, RoomsInFloor[rand].transform.position + randomPosition, Quaternion.identity);
             }
             spawnedBossRoom = true;
         }

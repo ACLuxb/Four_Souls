@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int health = 10;
+    public int health;
+    public int maxhealth = 10;
     
     private int collisionDamage = 2;
 
     private Rigidbody2D rb;
     private void Start()
     {
+        this.health = maxhealth;
         rb = GetComponent<Rigidbody2D>();
     }
     public void TakeDamage(int damage)

@@ -8,9 +8,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3201915235262346971, guid: 331535f27deb35343a68bf617a2c639f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.78
+      objectReference: {fileID: 0}
+    - target: {fileID: -3201915235262346971, guid: 331535f27deb35343a68bf617a2c639f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.2133334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4735539898784769726, guid: 331535f27deb35343a68bf617a2c639f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8923911374754931897, guid: f2274ee1f7374db4e8a998177c505230, type: 3}
     - target: {fileID: 6653474034450355351, guid: 331535f27deb35343a68bf617a2c639f, type: 3}
       propertyPath: m_Name
-      value: Crystal
+      value: Purple Crystal
       objectReference: {fileID: 0}
     - target: {fileID: 7733896973082011576, guid: 331535f27deb35343a68bf617a2c639f, type: 3}
       propertyPath: m_LocalPosition.x

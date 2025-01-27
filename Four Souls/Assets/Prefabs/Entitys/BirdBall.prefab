@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6057655098327851621}
   - component: {fileID: 4754165388682929368}
   - component: {fileID: 2829234969098486257}
+  - component: {fileID: 462721191657967586}
   m_Layer: 0
   m_Name: BirdBall
   m_TagString: Untagged
@@ -146,9 +147,24 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0.37680683, y: -0.0033732199}
   m_Radius: 0.28048426
+--- !u!114 &462721191657967586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4311825703817892169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c565953eaee3f4ab552df8f65bc7a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  airTime: 2
+  damage: 2
+  strength: 4
