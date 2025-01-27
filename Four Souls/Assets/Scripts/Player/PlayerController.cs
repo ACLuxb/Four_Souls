@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     private Vector2 moveDirection;
 
+    public Animator animator;
+
     public GameObject bulletPrefab;
     public float bulletSpeed;
     private float lastFire;
@@ -17,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     {
         MoveInputs();
         ShootInputs();
+
+        
     }
 
     void FixedUpdate() //Physics
@@ -29,7 +33,12 @@ public class PlayerMovement : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal"); // bewegung x positiv rechts -> negativ links    sprite: run side
         float moveY = Input.GetAxisRaw("Vertical"); // bewegung y positiv up   sprite: run up / y negativ down   sprite: run down
 
-        moveDirection = new Vector2(moveX, moveY).normalized;    
+        moveDirection = new Vector2(moveX, moveY).normalized;
+
+        animator.SetFloat("horizontal", moveX);
+        animator.SetFloat("vertical", moveY);
+        animator.SetFloat("Speed", moveDirection.magnitude);
+
     }
 
     void Move()

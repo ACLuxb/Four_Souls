@@ -23,7 +23,7 @@ public class GameOver : MonoBehaviour
 
 
 
-    public void Retry()
+    public void Retry() //either start from safepoint or from beginning
     {
        
 

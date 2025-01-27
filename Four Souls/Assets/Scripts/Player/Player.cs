@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
         if (immunityFrames == false)
         {
             this.health -= damage;
-            HealthBar.fillAmount = healthamount / 100f; //telling the healthbar the fillamount
+            HealthBar.fillAmount = health / 100f; //telling the healthbar the fillamount
 
             if (health <= 0)
             {

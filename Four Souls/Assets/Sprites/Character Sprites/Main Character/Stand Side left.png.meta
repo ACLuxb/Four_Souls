@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: ce67219673f638b4b9841ca90fe1dca9
+guid: 6b62ece63eeb0a2499838698464b8521
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5586335758864544706
-    second: Run Side_0
-  - first:
-      213: 7900667419501048876
-    second: Run Side_1
+      213: -5611569361889770883
+    second: Stand Side left_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Run Side_0
+      name: Stand Side left_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 12
-        width: 338
-        height: 480
+        x: 62
+        y: 4
+        width: 240
+        height: 496
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3c01d899395972b0800000000000000
-      internalID: -5586335758864544706
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run Side_1
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 476
-        width: 16
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c24bcd3982fc4ad60800000000000000
-      internalID: 7900667419501048876
+      spriteID: d7248109563bf12b0800000000000000
+      internalID: -5611569361889770883
       vertices: []
       indices: 
       edges: []
