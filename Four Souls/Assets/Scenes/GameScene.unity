@@ -1011,11 +1011,11 @@ PrefabInstance:
     - target: {fileID: 7390881605635221887, guid: ae396206989df2a4dbfc90d36ff7aceb, type: 3}
       propertyPath: animator
       value: 
-      objectReference: {fileID: 1583597104}
+      objectReference: {fileID: 0}
     - target: {fileID: 9170017751801239551, guid: ae396206989df2a4dbfc90d36ff7aceb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.6331253
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1583597104}
     - target: {fileID: 9170017751801239551, guid: ae396206989df2a4dbfc90d36ff7aceb, type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.0593283
@@ -1062,7 +1062,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 629799785557944246, guid: ae396206989df2a4dbfc90d36ff7aceb, type: 3}
   m_PrefabInstance: {fileID: 1583597102}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1583597104
+--- !u!95 &1583597107
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
