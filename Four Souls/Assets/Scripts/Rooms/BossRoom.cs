@@ -37,6 +37,7 @@ public class BossRoom : MonoBehaviour
 
                 player.CrystalCollection.Clear();
             }
+            
         }
     }
 }

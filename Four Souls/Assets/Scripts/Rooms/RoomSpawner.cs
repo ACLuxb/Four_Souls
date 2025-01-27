@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class RoomSpawner : MonoBehaviour {
@@ -23,7 +24,7 @@ public class RoomSpawner : MonoBehaviour {
             switch (openingDirection)
             {
                 case 1:
-                    rand = Random.Range(1, 5); //bottomRooms
+                    rand = UnityEngine.Random.Range(1, 5); //bottomRooms
                     switch (rand)
                     {
                         case 1:
@@ -41,7 +42,7 @@ public class RoomSpawner : MonoBehaviour {
                     }
                     break;
                 case 2:
-                    rand = Random.Range(1, 5); //topRooms
+                    rand = UnityEngine.Random.Range(1, 5); //topRooms
                     switch (rand)
                     {
                         case 1:
@@ -59,7 +60,7 @@ public class RoomSpawner : MonoBehaviour {
                     }
                     break;
                 case 3:
-                    rand = Random.Range(1, 5); //leftRooms
+                    rand = UnityEngine.Random.Range(1, 5); //leftRooms
                     switch (rand)
                     {
                         case 1:
@@ -77,7 +78,7 @@ public class RoomSpawner : MonoBehaviour {
                     }
                     break;
                 case 4:
-                    rand = Random.Range(1, 5); //rightRooms
+                    rand = UnityEngine.Random.Range(1, 5); //rightRooms
                     switch (rand)
                     {
                         case 1:
@@ -101,7 +102,7 @@ public class RoomSpawner : MonoBehaviour {
 
     void RandomRoom(GameObject[] rooms)
     {
-        rand = Random.Range(0, rooms.Length);
+        rand = UnityEngine.Random.Range(0, rooms.Length);
         Instantiate(rooms[rand], transform.position, rooms[rand].transform.rotation);
     }
     void OnTriggerEnter2D(Collider2D other)
@@ -129,36 +130,42 @@ public class RoomSpawner : MonoBehaviour {
             if (spawned == false)
             {
                 int otherOpening = other.GetComponent<RoomSpawner>().openingDirection;
+                try
+                {
+                    if ((openingDirection == 1 && otherOpening == 2))
+                    {
+                        rand = UnityEngine.Random.Range(0, templates.tbRooms.Length);
+                        Instantiate(templates.tbRooms[rand], transform.position, templates.tbRooms[rand].transform.rotation);
+                    }
+                    else if ((openingDirection == 1 && otherOpening == 3))
+                    {
+                        rand = UnityEngine.Random.Range(0, templates.blRooms.Length);
+                        Instantiate(templates.blRooms[rand], transform.position, templates.blRooms[rand].transform.rotation);
+                    }
+                    else if ((openingDirection == 1 && otherOpening == 4))
+                    {
+                        rand = UnityEngine.Random.Range(0, templates.brRooms.Length);
+                        Instantiate(templates.brRooms[rand], transform.position, templates.brRooms[rand].transform.rotation);
+                    }
+                    else if ((openingDirection == 2 && otherOpening == 3))
+                    {
+                        rand = UnityEngine.Random.Range(0, templates.tlRooms.Length);
+                        Instantiate(templates.tlRooms[rand], transform.position, templates.tlRooms[rand].transform.rotation);
+                    }
+                    else if ((openingDirection == 2 && otherOpening == 4))
+                    {
+                        rand = UnityEngine.Random.Range(0, templates.trRooms.Length);
+                        Instantiate(templates.trRooms[rand], transform.position, templates.trRooms[rand].transform.rotation);
+                    }
+                    else if ((openingDirection == 3 && otherOpening == 4))
+                    {
+                        rand = UnityEngine.Random.Range(0, templates.lrRooms.Length);
+                        Instantiate(templates.lrRooms[rand], transform.position, templates.lrRooms[rand].transform.rotation);
+                    }
+                }
+                catch (NullReferenceException)
+                {
 
-                if ((openingDirection == 1 && otherOpening == 2))
-                {
-                    rand = Random.Range(0, templates.tbRooms.Length);
-                    Instantiate(templates.tbRooms[rand], transform.position, templates.tbRooms[rand].transform.rotation);
-                }
-                else if ((openingDirection == 1 && otherOpening == 3))
-                {
-                    rand = Random.Range(0, templates.blRooms.Length);
-                    Instantiate(templates.blRooms[rand], transform.position, templates.blRooms[rand].transform.rotation);
-                }
-                else if ((openingDirection == 1 && otherOpening == 4))
-                {
-                    rand = Random.Range(0, templates.brRooms.Length);
-                    Instantiate(templates.brRooms[rand], transform.position, templates.brRooms[rand].transform.rotation);
-                }
-                else if ((openingDirection == 2 && otherOpening == 3))
-                {
-                    rand = Random.Range(0, templates.tlRooms.Length);
-                    Instantiate(templates.tlRooms[rand], transform.position, templates.tlRooms[rand].transform.rotation);
-                }
-                else if ((openingDirection == 2 && otherOpening == 4))
-                {
-                    rand = Random.Range(0, templates.trRooms.Length);
-                    Instantiate(templates.trRooms[rand], transform.position, templates.trRooms[rand].transform.rotation);
-                }
-                else if ((openingDirection == 3 && otherOpening == 4))
-                {
-                    rand = Random.Range(0, templates.lrRooms.Length);
-                    Instantiate(templates.lrRooms[rand], transform.position, templates.lrRooms[rand].transform.rotation);
                 }
             }
         }

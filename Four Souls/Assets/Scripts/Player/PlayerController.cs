@@ -19,8 +19,6 @@ public class PlayerMovement : MonoBehaviour
     {
         MoveInputs();
         ShootInputs();
-
-        
     }
 
     void FixedUpdate() //Physics
