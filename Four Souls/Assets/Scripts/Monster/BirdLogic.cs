@@ -8,6 +8,8 @@ public class BirdLogic : MonoBehaviour
 
     public GameObject projectile;
 
+    public Animator animator;
+
     bool monsterActiv = false;
 
     public float fireRate = 1f; 
@@ -37,6 +39,7 @@ public class BirdLogic : MonoBehaviour
                 fireRate = rand;
             }
 
+          
         }
     }
     void Shoot(Vector2 direction)
@@ -49,6 +52,10 @@ public class BirdLogic : MonoBehaviour
         if (rb != null)
         {
             rb.linearVelocity = direction * bulletSpeed;
+
+            direction.x = Input.GetAxisRaw("Horizontal");
+            animator.SetFloat("Horizontal", direction.x);
+            animator.SetBool("Shooting", true);
         }
     }
     IEnumerator SpawnDelay()
