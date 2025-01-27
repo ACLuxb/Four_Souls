@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4754165388682929368}
   - component: {fileID: 2829234969098486257}
   m_Layer: 0
-  m_Name: Fireball
+  m_Name: BirdBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 4647153848696920305, guid: dc897e40a5566844b8a300b036e32834, type: 3}
+  m_Sprite: {fileID: -1229858627709956937, guid: ad79602e5f8f78d44a1e74f89d9190e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -150,5 +150,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.5167994, y: 0.00000006160728}
-  m_Radius: 0.4103569
+  m_Offset: {x: 0.37680683, y: -0.0033732199}
+  m_Radius: 0.28048426
