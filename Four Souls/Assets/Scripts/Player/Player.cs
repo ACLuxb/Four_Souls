@@ -19,9 +19,16 @@ public class Player : MonoBehaviour
 
     public List<GameObject> CrystalCollection;
 
+    public TextMeshProUGUI scoretext;
+
     private void Start()
     {
 
+    }
+
+    public void Update()
+    {
+        scoretext.text = (CrystalCollection.Count + " out of 4 Chrystals found");
     }
 
     public void TakeDamage(int damage)

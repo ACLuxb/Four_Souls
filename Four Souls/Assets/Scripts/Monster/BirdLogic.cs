@@ -38,8 +38,10 @@ public class BirdLogic : MonoBehaviour
                 rand = Random.Range(0.6f, 1.4f);
                 fireRate = rand;
             }
+            direction.x = Input.GetAxisRaw("Horizontal");
+            animator.SetFloat("Horizontal", direction.x);
+            animator.SetBool("Shooting", true);
 
-          
         }
     }
     void Shoot(Vector2 direction)
