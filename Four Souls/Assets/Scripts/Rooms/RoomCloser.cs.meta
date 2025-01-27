@@ -5,6 +5,7 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - OpenDoor: {fileID: -7583001618275427313, guid: 2f5b4e8b0fb5a5d4b8d8fa4f6dd6f639, type: 3}
+  - ClosedDoor: {fileID: -1324316005690313720, guid: a545d22e05e4eb4449e7a16bf2c39c80, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

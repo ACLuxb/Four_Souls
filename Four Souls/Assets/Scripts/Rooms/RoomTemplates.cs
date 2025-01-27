@@ -4,9 +4,6 @@ using UnityEngine;
 using System.Linq;
 using System.IO;
 
-
-
-
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -30,8 +27,7 @@ public class RoomTemplates : MonoBehaviour
     public List<GameObject> RoomsInFloor;
 
     public float waitTime;
-    public bool spawnedBoss;
-    public GameObject boss;
+    public bool spawnedBossRoom;
 
     private int rand;
 
@@ -44,7 +40,7 @@ public class RoomTemplates : MonoBehaviour
 
     private void Update()
     {
-        if (waitTime <= 0 && spawnedBoss == false)
+        if (waitTime <= 0 && spawnedBossRoom == false)
         {
             for (int i = 0; i < RoomsInFloor.Count; i++)
             {
@@ -52,15 +48,14 @@ public class RoomTemplates : MonoBehaviour
                 {
 
                     RoomsInFloor[i].GetComponent<SpriteRenderer>().sprite = BossRoomSprite;
-                    Instantiate(boss, RoomsInFloor[i].transform.position, Quaternion.identity);
-                    //foreach() MonsterSpawner in room -> destroy
+                    RoomsInFloor[i].AddComponent<BossRoom>();
 
-                    spawnedBoss = true;
+
                 }
                 rand = UnityEngine.Random.Range(0, RoomsInFloor.Count);
                 //RedCrystal.transform.parent = RoomsInFloor[rand].transform;
-
             }
+            spawnedBossRoom = true;
         }
         else
         {

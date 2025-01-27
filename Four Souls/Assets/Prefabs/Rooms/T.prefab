@@ -871,7 +871,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b621927a675555447b6a728b54fda1fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClosedDoor: {fileID: 0}
+  OpenDoor: {fileID: -7583001618275427313, guid: 2f5b4e8b0fb5a5d4b8d8fa4f6dd6f639, type: 3}
+  ClosedDoor: {fileID: -1324316005690313720, guid: a545d22e05e4eb4449e7a16bf2c39c80, type: 3}
 --- !u!212 &2874606278394201264
 SpriteRenderer:
   m_ObjectHideFlags: 0

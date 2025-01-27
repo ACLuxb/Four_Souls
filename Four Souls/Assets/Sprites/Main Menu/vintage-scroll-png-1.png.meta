@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      vintage-scroll-png-1_0: 2292779410118615923
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
