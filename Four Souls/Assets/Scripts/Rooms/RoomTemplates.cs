@@ -62,7 +62,19 @@ public class RoomTemplates : MonoBehaviour
             waitTime -= Time.deltaTime;
         }
     }
+    /*
+    public void LoadGameData()
+    {
+        GameData data = SaveSystem.LoadGame();
 
+        List<GameObject> RoomsInFloor = data.DungeonLayout;
+        Debug.Log(RoomsInFloor);
+        foreach (GameObject room in RoomsInFloor)
+        {
+            Instantiate(room, transform.position, transform.rotation);
+        }
+    }
+    */
 #if UNITY_EDITOR
     [ContextMenu("Load Prefabs")]
     private void LoadPrefabs()

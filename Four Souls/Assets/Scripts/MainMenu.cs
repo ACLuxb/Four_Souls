@@ -6,10 +6,10 @@ using UnityEngine.Audio;
 public class MainMenu : MonoBehaviour
 {
     // public AudioSource ButtonClick;      didnt work, kept for reference
+    public Save_LoadGameData loadData;
 
     public void PlayGame() //method to start the gameplay  
     {
-        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //Load the next scene following the active one via scene index number
     }
 

@@ -6,9 +6,11 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenu; //reference the Panel which acts as the Pause Menu overlay
     public bool isPaused;   //create bool to check if game is paused
+    public Save_LoadGameData saveGameData;
 
    void Start ()            
     {
+        
         pauseMenu.SetActive(false);     //set the panel to inactive at the start
     }
 
@@ -47,6 +49,8 @@ public class PauseMenu : MonoBehaviour
     public void BacktoMain() 
     { 
         Time.timeScale = 1f;                    //resume ingame time normally
+        //Save_LoadGameData save = GameObject.Find("GameSystem").GetComponent<Save_LoadGameData>();
+        //save.SaveGameData();
         SceneManager.LoadScene("Main Menu");    //Load Main Menu
     }
 
