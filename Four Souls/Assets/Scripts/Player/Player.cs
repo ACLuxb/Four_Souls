@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
 
     public List<GameObject> CrystalCollection;
 
-    public TextMeshProUGUI scoretext;
+    //public TextMeshProUGUI scoretext;
 
     private void Start()
     {
@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
 
     public void Update()
     {
-        scoretext.text = (CrystalCollection.Count + " out of 4 Chrystals found");
+        //scoretext.text = (CrystalCollection.Count + " out of 4 Chrystals found");
     }
 
     public void TakeDamage(int damage)
@@ -61,10 +61,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        
-    }
     void EndImmunity()
     {
         immunityFrames = false;
