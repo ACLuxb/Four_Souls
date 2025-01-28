@@ -1,3 +1,5 @@
+using System;
+using TMPro;
 using UnityEngine;
 
 public class BossRoom : MonoBehaviour
@@ -7,8 +9,8 @@ public class BossRoom : MonoBehaviour
 
     private Vector3 spawnPosition;
 
-    private bool bossSpawned;
-
+    public bool bossSpawned;
+    
     void Start()
     {
         boss = Resources.Load<GameObject>("Boss");
@@ -29,7 +31,7 @@ public class BossRoom : MonoBehaviour
 
             if (player.CrystalCollection.Count == 4)
             {
-                
+
                 player.transform.position = new Vector3(transform.position.x, transform.position.y - 3, transform.position.z);
                 spawnPosition = new Vector3(transform.position.x, transform.position.y + 3, transform.position.z);
 
@@ -37,7 +39,12 @@ public class BossRoom : MonoBehaviour
 
                 player.CrystalCollection.Clear();
             }
-            
+            else 
+            {
+                //PopUpText.NotEnoughCrystals.Invoke();     for some reason this ruins everything
+            }
+             
         }
     }
+   
 }

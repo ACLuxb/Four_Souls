@@ -12,24 +12,27 @@ public class YouWin : MonoBehaviour
 
     public static event Action OnBossDeath;
 
-  //  public void Update() 
-    //{ 
-      //  Enemy boss= GameObject.Find("boss").GetComponent<Enemy>(); //get the boss' current health
-        
-       // if ( boss.health <=0 )
-      //  {
-        //    OnBossDeath!.Invoke(); //event starts of boss is dead
-      //  }
-    //}
+     
 
+    public void CheckBossHealth() 
+    { 
+        Enemy boss= GameObject.Find("boss").GetComponent<Enemy>(); //get the boss' current health
+        
+        if ( boss.health <=0 )
+        {
+            OnBossDeath!.Invoke(); //event starts of boss is dead
+        }
+    
+    }
     private void OnEnable()
     {
-        OnBossDeath += EnableYouWinMenu;     //subscribing to the event that triggers when player got murked
+        OnBossDeath += EnableYouWinMenu;  //subscribing to the event that triggers when player got murked
+        
     }
 
     public void OnDisable()
     {
-        Player.OnPlayerDeath -= EnableYouWinMenu; // just to make sure onEnable works properly
+        OnBossDeath -= EnableYouWinMenu; // just to make sure onEnable works properly
     }
 
     public void EnableYouWinMenu()
