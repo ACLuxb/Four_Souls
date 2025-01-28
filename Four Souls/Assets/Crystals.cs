@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class Crystals : MonoBehaviour
 {
@@ -14,6 +13,7 @@ public class Crystals : MonoBehaviour
         {
             this.gameObject.SetActive(false);
             player.CrystalCollection.Add(this.gameObject);
+            Debug.Log("Count +1");
         }
     }
 }

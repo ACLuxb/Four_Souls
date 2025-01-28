@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.IO;
+using TMPro;
+using System.Runtime.CompilerServices;
 
 public class Player : MonoBehaviour
 {
@@ -19,7 +21,8 @@ public class Player : MonoBehaviour
 
     public List<GameObject> CrystalCollection;
 
-    //public TextMeshProUGUI scoretext;
+    public TextMeshProUGUI scoretext;
+    
 
     private void Start()
     {
@@ -28,7 +31,7 @@ public class Player : MonoBehaviour
 
     public void Update()
     {
-        //scoretext.text = (CrystalCollection.Count + " out of 4 Chrystals found");
+        scoretext.text = (CrystalCollection.Count + " out of 4 Chrystals found");
     }
 
     public void TakeDamage(int damage)
