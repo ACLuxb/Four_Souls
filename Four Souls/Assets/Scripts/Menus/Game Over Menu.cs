@@ -23,10 +23,9 @@ public class GameOver : MonoBehaviour
 
 
 
-    public void Retry() //either start from safepoint or from beginning
+    public void Retry() //restart the game scene, we didn't get the safepoint to work
     {
-       
-
+        SceneManager.LoadScene("GameScene");
     }
 
     public void BacktoMain() 
