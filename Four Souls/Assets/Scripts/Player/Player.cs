@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using TMPro;
 using System.Runtime.CompilerServices;
+using System.Linq;
 
 public class Player : MonoBehaviour
 {
@@ -31,8 +32,13 @@ public class Player : MonoBehaviour
 
     public void Update()
     {
-        scoretext.text = (CrystalCollection.Count + " out of 4 Chrystals found");
+         scoretext.text = (CrystalCollection.Count + " out of 4 Chrystals found");
     }
+
+    /*public void ScoreText() 
+    {
+        scoretext.text = (CrystalCollection.Count + " out of 4 Chrystals found");
+    }*/
 
     public void TakeDamage(int damage)
     {
