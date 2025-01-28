@@ -1,10 +1,13 @@
 using UnityEngine;
+using System;
 
 public class Enemy : MonoBehaviour
 {
     public int health;
     public int maxhealth = 10;
-    
+
+    public static event Action OnBossDeath;
+
     private int collisionDamage = 2;
 
     private Rigidbody2D rb;
@@ -38,6 +41,10 @@ public class Enemy : MonoBehaviour
     }
     void Die()
     {
-        Destroy(gameObject);
+        if (this.gameObject.GetComponent<BossMovement>() != null)
+        {
+            OnBossDeath!.Invoke();
+        }
+            Destroy(gameObject);
     }
 }
