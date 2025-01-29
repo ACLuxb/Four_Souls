@@ -130,7 +130,7 @@ public class RoomSpawner : MonoBehaviour {
             if (spawned == false)
             {
                 int otherOpening = other.GetComponent<RoomSpawner>().openingDirection;
-                try
+                
                 {
                     if ((openingDirection == 1 && otherOpening == 2))
                     {
@@ -163,10 +163,7 @@ public class RoomSpawner : MonoBehaviour {
                         Instantiate(templates.lrRooms[rand], transform.position, templates.lrRooms[rand].transform.rotation);
                     }
                 }
-                catch (NullReferenceException)
-                {
 
-                }
             }
         }
         spawned = true;
