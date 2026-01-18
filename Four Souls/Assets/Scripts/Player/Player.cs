@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
 
     public List<GameObject> CrystalCollection;
 
-    public TextMeshProUGUI scoretext;
+    [SerializeField] TextMeshProUGUI scoretext;
     
 
     private void Start()
