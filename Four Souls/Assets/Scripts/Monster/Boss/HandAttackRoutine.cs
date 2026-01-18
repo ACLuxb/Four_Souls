@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class HandAttackRoutine : MonoBehaviour
 {
@@ -12,9 +13,14 @@ public class HandAttackRoutine : MonoBehaviour
 
     private bool phase2 = false;
 
+    public AudioSource AudioShoot;
+    public AudioSource AudioGrowl;
+    public AudioClip shootSFX;
+    public AudioClip growlSFX;
+
     void Start()
     {
-
+        AudioGrowl.PlayOneShot(growlSFX);
     }
 
     private void Update()
@@ -33,6 +39,7 @@ public class HandAttackRoutine : MonoBehaviour
         {
             phase2 = true;
         }
+        
 
     }
     void Shoot()
@@ -40,6 +47,7 @@ public class HandAttackRoutine : MonoBehaviour
         GameObject Fireball = Instantiate(FireballPrefab, transform.position, Quaternion.Euler(0, 0, -90));
         Fireball.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, -6);
         this.gameObject.GetComponent<SpriteRenderer>().sprite = neutralSprite;
+        AudioShoot.PlayOneShot(shootSFX);
 
         if (phase2)
         {
@@ -47,6 +55,7 @@ public class HandAttackRoutine : MonoBehaviour
             Fireball2.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(2, -6);
             GameObject Fireball3 = Instantiate(FireballPrefab, transform.position, Quaternion.Euler(0, 0, -90));
             Fireball3.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(-2, -6);
+            AudioShoot.PlayOneShot(shootSFX);
         }
     }
 }

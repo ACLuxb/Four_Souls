@@ -18,6 +18,9 @@ public class BirdLogic : MonoBehaviour
 
     private float rand;
 
+    public AudioSource AudioShoot;
+    public AudioClip shootSFX;
+
     void Start()
     {
         player = GameObject.Find("Player");
@@ -37,8 +40,9 @@ public class BirdLogic : MonoBehaviour
                 fireCooldown = fireRate;
                 rand = Random.Range(0.6f, 1.4f);
                 fireRate = rand;
+                AudioShoot.PlayOneShot(shootSFX);
             }
-            direction.x = Input.GetAxisRaw("Horizontal");
+            
             animator.SetFloat("Horizontal", direction.x);
             animator.SetBool("Shooting", true);
 

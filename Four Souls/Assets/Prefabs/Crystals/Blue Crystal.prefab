@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.2133334
       objectReference: {fileID: 0}
+    - target: {fileID: 4470078485422186957, guid: 331535f27deb35343a68bf617a2c639f, type: 3}
+      propertyPath: blingSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d992ceca5e3431409d70f95415af0b0, type: 3}
+    - target: {fileID: 4470078485422186957, guid: 331535f27deb35343a68bf617a2c639f, type: 3}
+      propertyPath: AudioBling
+      value: 
+      objectReference: {fileID: 5716656723944567054}
     - target: {fileID: 4735539898784769726, guid: 331535f27deb35343a68bf617a2c639f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -69,3 +77,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 331535f27deb35343a68bf617a2c639f, type: 3}
+--- !u!82 &5716656723944567054 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8625762957797572200, guid: 331535f27deb35343a68bf617a2c639f, type: 3}
+  m_PrefabInstance: {fileID: 4098689858655965030}
+  m_PrefabAsset: {fileID: 0}

@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class SlimeLogic : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class SlimeLogic : MonoBehaviour
 
     bool monsterActiv = false;
 
+    public Animator animator; //to assign an animation
+
+    public AudioSource AudioScream;
+    public AudioClip screamSFX;
 
     void Start()
     {
@@ -25,7 +30,29 @@ public class SlimeLogic : MonoBehaviour
             Vector2 direction = player.transform.position - transform.position;
 
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+
+            animator.SetFloat("Horizontal", direction.x); //parameter for the direction of the animation
+
+            bool isMoving = direction.magnitude > 0.1f;
+
+            if (isMoving)
+            {
+                if (!AudioScream.isPlaying)
+                {
+                    AudioScream.clip = screamSFX;
+                    AudioScream.Play();
+                }
+            }
+            else
+            {
+                if (AudioScream.isPlaying)
+                {
+                    AudioScream.Stop();
+                }
+            }
+
         }
+
     }
 
     IEnumerator SpawnDelay() 

@@ -44,5 +44,7 @@ public class BossMovement : MonoBehaviour
 
         playerFollowPosition = Vector3.Lerp(transform.position, targetPosition, followSpeed * Time.deltaTime);
         transform.position = playerFollowPosition + sinusPosition;
+
+
     }
 }
