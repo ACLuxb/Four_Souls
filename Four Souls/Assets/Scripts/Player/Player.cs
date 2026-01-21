@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
 
     public void Update()
     {
-         scoretext.text = (CrystalCollection.Count + " out of 4 Chrystals found");
+         scoretext.text = (CrystalCollection.Count + " out of 4 Crystals found");
     }
 
     /*public void ScoreText() 
