@@ -4,13 +4,17 @@ using System.Collections;
 
 public class Crystals : MonoBehaviour
 {
-    public AudioSource AudioBling;
     public AudioClip blingSFX;
 
-    private IEnumerator PlayBlingAndDisable()
+    public AudioSource speaker;
+
+    private void Start()
     {
-        AudioBling.PlayOneShot(blingSFX);
-        yield return new WaitForSeconds(blingSFX.length);
+        speaker = GameObject.Find("Collect Sound").GetComponent<AudioSource>();
+    }
+    private void PlayBlingAndDisable()
+    {
+        speaker.PlayOneShot(blingSFX);
         this.gameObject.SetActive(false);
     }
 
@@ -25,7 +29,7 @@ public class Crystals : MonoBehaviour
             Debug.Log("Count +1");
 
             // Coroutine starten, damit der Sound gespielt wird bevor das GameObject deaktiviert wird
-            StartCoroutine(PlayBlingAndDisable());
+            PlayBlingAndDisable();
         }
     }
 }
